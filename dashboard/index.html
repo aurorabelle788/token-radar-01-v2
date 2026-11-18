@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar — pre-token protocols priced off their traded comps</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header>
+  <h1>Token Radar</h1>
+  <p id="subtitle">Pre-token protocols, priced off the market that already trades.</p>
+  <div id="kpis"></div>
+</header>
+<nav id="tabs">
+  <button data-tab="board" class="active">Board</button>
+  <button data-tab="validation">How we know this works</button>
+  <button data-tab="live">Live tokens</button>
+</nav>
+<main>
+  <section id="tab-board">
+    <div id="filters">
+      <input id="q" type="search" placeholder="Search name or slug…" aria-label="Search">
+      <select id="verdict" aria-label="Verdict">
+        <option value="">All verdicts</option>
+        <option>Farm</option>
+        <option>Thin</option>
+        <option>Skip</option>
+      </select>
+      <select id="watch" aria-label="Watchlist">
+        <option value="">Watchlist + early</option>
+        <option value="watch">Watchlist only</option>
+        <option value="early">Early only</option>
+      </select>
+      <span id="count"></span>
+    </div>
+    <table id="board">
+      <thead><tr>
+        <th data-sort="rank">#</th><th data-sort="name">Protocol</th><th data-sort="category">Category</th>
+        <th data-sort="tvl_usd">TVL</th><th data-sort="implied_value_usd">Implied value</th>
+        <th data-sort="per_hour">$/hour</th><th data-sort="verdict">Verdict</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+    <p id="assumption"></p>
+  </section>
+  <section id="tab-validation" hidden>
+    <h2>How we know this works</h2>
+    <div id="loo"></div>
+    <div id="walk"></div>
+    <div id="ranks"></div>
+    <h3>Comps: what the market already pays</h3>
+    <div id="scatter"></div>
+    <p id="fitnote"></p>
+  </section>
+  <section id="tab-live" hidden>
+    <h2>Live tokens</h2>
+    <p>The market's own values, not a model's — shown apart from the ranked board.</p>
+    <table id="livetab"><thead><tr><th>Protocol</th><th>Category</th><th>TVL</th><th>Market cap</th><th>7d</th></tr></thead><tbody></tbody></table>
+  </section>
+  <section id="detail" hidden></section>
+</main>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

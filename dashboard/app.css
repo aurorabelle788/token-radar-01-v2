@@ -1,0 +1,35 @@
+:root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--amber:#d29922;--red:#f85149}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:20px 24px 8px}h1{margin:0;font-size:26px}h2{font-size:19px;margin:18px 0 8px}h3{font-size:16px;margin:16px 0 6px}
+#subtitle{color:var(--muted);margin:4px 0 12px}
+#kpis{display:flex;flex-wrap:wrap;gap:8px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px}
+.kpi b{display:block;font-size:16px;color:var(--accent)}
+#tabs{display:flex;gap:4px;padding:0 24px;border-bottom:1px solid var(--line)}
+#tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);font:inherit;padding:10px 14px;cursor:pointer}
+#tabs button.active{color:var(--text);border-bottom-color:var(--accent)}
+main{padding:8px 24px 32px}
+#filters{display:flex;gap:8px;align-items:center;margin:12px 0;flex-wrap:wrap}
+#filters input,#filters select{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:6px;padding:7px 10px;font:inherit}
+#count{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:8px;overflow:hidden}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{color:var(--muted);cursor:pointer;white-space:nowrap}
+th:hover{color:var(--text)}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:#1c2128}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.v-Farm{color:var(--green);font-weight:600}.v-Thin{color:var(--amber);font-weight:600}.v-Skip{color:var(--red);font-weight:600}
+#assumption{color:var(--muted);font-size:13px}
+#detail{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin-top:16px}
+#detail h2{margin-top:0}
+#detail .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:12px 0}
+#detail .cell{border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:13px}
+#detail .cell b{display:block;font-size:15px}
+#detail ol{padding-left:20px}
+#detail li{margin:6px 0}
+#detail .verdict{font-size:17px;margin:8px 0}
+#loo table,#walk table,#ranks table{margin:8px 0}
+#scatter svg{background:var(--panel);border:1px solid var(--line);border-radius:8px;width:100%;max-width:760px;height:auto}
+#fitnote,#tab-validation p{color:var(--muted);font-size:13px;max-width:760px}
